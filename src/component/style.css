@@ -1,0 +1,230 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(../images/OZpGg_pnoDtINPfRIlLohlvHwQ.woff2);
+}
+
+.AllMainLolly {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.lollipop {
+  height: 50vh;
+  width: 150px;
+  padding: 20px;
+}
+.MainHead {
+  font-family: myFirstFont;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+.MainHead h1 {
+  font-size: 70px;
+  font-weight: bold;
+  font-size-adjust: initial;
+}
+.MainHead p {
+  font-family: serif;
+}
+.Main {
+  background-color: #221f2b;
+  background-size: contain;
+}
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+h1 {
+  font-size: calc(20px + 18vh);
+  line-height: calc(20px + 20vh);
+  text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fff;
+  /* text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+    0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff; */
+  font-family: "Sacramento", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+p {
+  margin-top: -35px;
+  font-size: calc(5px + 2vh);
+  line-height: calc(2px + 2vh);
+  text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fff;
+  /* text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+    0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff; */
+  font-family: "Sacramento", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  10%,
+  15%,
+  19%,
+  25%,
+  44%,
+  56%,
+  80% {
+    color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+    /* text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+      0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9; */
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    color: #fff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+    /* text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+      0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9; */
+  }
+}
+.glow-on-hover {
+  width: 400px;
+  height: 50px;
+  border: 1px solid #a4009d;
+  outline: none;
+  color: #890092;
+  background: #221f2b;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 20px;
+
+  font-size: 3vh;
+}
+.glow-on-hover:hover {
+  color: white;
+  background-color: #a4009d;
+}
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 20px;
+}
+
+.glow-on-hover:active {
+  color: #fff;
+}
+
+.glow-on-hover:active:after {
+  background: #221f2b;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #221f2b;
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.buttonMain {
+  /* width: 20%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+@media only screen and (max-width: 600px) {
+  .buttonMain {
+    /* width: 20%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    padding-top: -25px;
+    padding-bottom: 25px;
+  }
+  .glow-on-hover {
+    width: 80%;
+    height: 50px;
+    border: 1px solid #a4009d;
+    outline: none;
+    color: #890092;
+    background: #221f2b;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+
+    font-size: 3vh;
+  }
+}

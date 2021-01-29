@@ -20,7 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   data.get_lolly.allAuthors.forEach((edge) => {
     createPage({
-      path: `LollyCreate/${edge.lollyPath}`,
+      path: `/LollyCreate/${edge.lollyPath}`,
       component: path.resolve("./src/template/template.tsx"),
       context: edge,
     });

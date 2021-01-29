@@ -5,7 +5,8 @@ module.exports = {
       options: {
         typeName: "lollypop",
         fieldName: "get_lolly",
-        url: "/.netlify/functions/Addlolly",
+        url:
+          "https://priceless-kirch-c43f8d.netlify.app/.netlify/functions/Addlolly",
       },
     },
   ],

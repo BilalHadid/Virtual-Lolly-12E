@@ -26,11 +26,11 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 };
-exports.onCreatePage = async ({ page, actions }) => {
-  const { createPage } = actions;
+// exports.onCreatePage = async ({ page, actions }) => {
+//   const { createPage } = actions;
 
-  if (page.path.match(/^\/lolly/)) {
-    page.matchPath = "/LollyCreate/*";
-    createPage(page);
-  }
-};
+//   if (page.path.match(/^\/lolly/)) {
+//     page.matchPath = "/LollyCreate/*";
+//     createPage(page);
+//   }
+// };

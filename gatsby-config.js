@@ -5,7 +5,7 @@ module.exports = {
       options: {
         typeName: "lollypop",
         fieldName: "get_lolly",
-        url: "http://localhost:8888/.netlify/functions/Addlolly",
+        url: "/.netlify/functions/Addlolly",
       },
     },
   ],

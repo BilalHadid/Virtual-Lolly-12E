@@ -3,10 +3,9 @@ module.exports = {
     {
       resolve: "gatsby-source-graphql",
       options: {
-        typeName: "lollypop",
-        fieldName: "get_lolly",
-        url:
-          "https://priceless-kirch-c43f8d.netlify.app/.netlify/functions/Addlolly",
+        typeName: "GET_LOLLIES",
+        fieldName: "get_lollies",
+        url: "http://localhost:8888/.netlify/functions/Addlolly",
       },
     },
   ],

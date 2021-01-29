@@ -3,13 +3,10 @@ import Layout from "../Layout/Layout";
 import * as Yup from "yup";
 
 import { Formik, Form, Field } from "formik";
-import AllMainLolly from "../component/AllMainLolly";
 import Lolly from "../MainLolly/Lolly";
 import { useMutation } from "@apollo/client";
 import gql from "graphql-tag";
-import { Link } from "gatsby";
 import FinalPage from "../component/FinalPage";
-import Template from "../template/template";
 
 const All_lolly = gql`
   {
@@ -41,6 +38,11 @@ const create_Lolly = gql`
       falvourMid: $falvourMid
       falvourBtm: $falvourBtm
     ) {
+      Toname
+      fromName
+      falvourTop
+      falvourMid
+      falvourBtm
       message
       lollyPath
     }
@@ -119,7 +121,6 @@ const LollyCreate = () => {
                 validationSchema={SignupSchema}
                 onSubmit={(values) => {
                   // same shape as initial values
-                  console.log(values, "favoursAll", topFav, midFav, btmFav);
 
                   createLolly({
                     variables: {
@@ -182,14 +183,17 @@ const LollyCreate = () => {
             </div>
           </div>
         ) : (
-          <Link to={`/LollyCreate/${data.createLolly.lollyPath}`}>
+          <div>
             <FinalPage
               Toname={data.createLolly.Toname}
               message={data.createLolly.message}
               fromName={data.createLolly.fromName}
               lollyPath={data.createLolly.lollyPath}
+              TopFlavour={data.createLolly.falvourTop}
+              MidFlavour={data.createLolly.falvourMid}
+              BottomFlavour={data.createLolly.falvourBtm}
             />
-          </Link>
+          </div>
         )}
       </div>
     </Layout>

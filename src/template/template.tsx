@@ -15,17 +15,15 @@ const Template = ({
 }) => {
   return (
     <div>
-      <h1>Gello</h1>
-      <Lolly
-        TopFlavour={falvourTop}
-        MidFlavour={falvourMid}
-        BottomFlavour={falvourBtm}
-      />
+      
       <FinalPage
         Toname={Toname}
         message={message}
         fromName={fromName}
         lollyPath={lollyPath}
+        TopFlavour={falvourTop}
+        MidFlavour={falvourMid}
+        BottomFlavour={falvourBtm}
       />
     </div>
   );

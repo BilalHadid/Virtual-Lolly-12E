@@ -1,4 +1,4 @@
 [build]
-    command = "yarn build"
+    command = "yarn build && cd functions/Addlolly && yarn install"
     publish = "public"
     functions = "functions"

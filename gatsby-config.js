@@ -3,8 +3,8 @@ module.exports = {
     {
       resolve: "gatsby-source-graphql",
       options: {
-        typeName: "GET_LOLLIES",
-        fieldName: "get_lollies",
+        typeName: "LollyGet",
+        fieldName: "lolly_get",
         url: "http://localhost:8888/.netlify/functions/Addlolly",
       },
     },

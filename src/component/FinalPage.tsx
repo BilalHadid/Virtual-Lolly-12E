@@ -41,7 +41,7 @@ const FinalPage = ({
         >
           <p
             style={{ color: "#bbbbbb" }}
-          >{`${fromName} made this virtual lollipop for you. `}</p>
+          >{`${Toname} made this virtual lollipop for you. `}</p>
           <button className="buttonfor" onClick={() => navigate("/")}>
             Make your Own
           </button>

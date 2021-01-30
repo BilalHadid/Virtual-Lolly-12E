@@ -77,7 +77,9 @@ const resolvers = {
       );
 
       axios
-        .post("http://localhost:8888/.netlify/functions/Addlolly")
+        .post(
+          "https://virtual-lolly-pop.netlify.app/.netlify/functions/Addlolly"
+        )
         .then(function (response) {
           console.log(response);
         })

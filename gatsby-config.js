@@ -6,7 +6,8 @@ module.exports = {
       options: {
         typeName: "allAuthors",
         fieldName: "get_lollies",
-        url: "http://localhost:8888/.netlify/functions/Addlolly",
+        url:
+          "https://virtual-lolly-pop.netlify.app/.netlify/functions/Addlolly",
         refetchInterval: 60,
       },
     },

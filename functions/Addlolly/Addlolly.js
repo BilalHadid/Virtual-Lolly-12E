@@ -1,7 +1,7 @@
 const { ApolloServer, gql } = require("apollo-server-lambda");
 const faunadb = require("faunadb"),
   q = faunadb.query;
-
+const axios = require("axios");
 const shortid = require("shortid");
 const typeDefs = gql`
   type Query {
@@ -75,7 +75,9 @@ const resolvers = {
           data: args,
         })
       );
-
+      const build = await axios.post(
+        "http://localhost:8888/.netlify/functions/Addlolly"
+      );
       console.log("result", result);
       console.log("result", result.data);
       return result.data;

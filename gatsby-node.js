@@ -1,37 +1,36 @@
-const path = require("path");
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
-  const { data } = await graphql(`
-    {
-      lolly_get {
-        allAuthors {
-          Toname
-          message
-          fromName
-          falvourTop
-          falvourMid
-          falvourBtm
-          lollyPath
-        }
-      }
-    }
-  `);
-  console.log("response =", data);
+// const path = require("path");
+// exports.createPages = async ({ graphql, actions }) => {
+//   const { createPage } = actions;
 
-  data.lolly_get.allAuthors.forEach((edge) => {
-    createPage({
-      path: `LollyCreate/${edge.lollyPath}`,
-      component: path.resolve("./src/template/template.tsx"),
-      context: edge,
-    });
-  });
-};
+//   const { data } = await graphql(`
+//     {
+//       all_authors {
+//         allAuthors {
+//           Toname
+//           message
+//           fromName
+//           falvourTop
+//           falvourMid
+//           falvourBtm
+//           lollyPath
+//         }
+//       }
+//     }
+//   `);
 
-exports.onCreatePage = async ({ page, actions }) => {
-  const { createPage } = actions;
+//   data.all_authors.allAuthors.forEach((node) => {
+//     createPage({
+//       path: `LollyCreate/${node.lollyPath}`,
+//       component: path.resolve("./src/template/template.tsx"),
+//       context: node,
+//     });
+//   });
+// };
+// exports.onCreatePage = async ({ page, actions }) => {
+//   const { createPage } = actions;
 
-  if (page.path.match(/^\/LollyCreate/)) {
-    page.matchPath = "/LollyCreate/*";
-    createPage(page);
-  }
-};
+//   if (page.path.match(/^\/LollyCreate/)) {
+//     page.matchPath = "/LollyCreate/*";
+//     createPage(page);
+//   }
+// };

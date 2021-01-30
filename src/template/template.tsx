@@ -15,7 +15,7 @@ const Template = ({
 }) => {
   return (
     <div>
-      
+      <h1>helllo</h1>
       <FinalPage
         Toname={Toname}
         message={message}

@@ -1,10 +1,10 @@
 const path = require("path");
 exports.createPages = async ({ graphql, actions }) => {
-  //   const { createPage } = actions;
+  const { createPage } = actions;
 
   const { data } = await graphql(`
     {
-      all_authors {
+      get_lollies {
         allAuthors {
           Toname
           message
@@ -19,8 +19,8 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
   //   console.log(response.data);
 
-  data.all_authors.allAuthors.forEach((node) => {
-    actions.createPage({
+  data.get_lollies.allAuthors.forEach((node) => {
+    createPage({
       path: `LollyCreate/${node.lollyPath}`,
       component: path.resolve("./src/template/template.tsx"),
       context: node,
@@ -30,7 +30,7 @@ exports.createPages = async ({ graphql, actions }) => {
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage } = actions;
 
-  if (page.path.match(/^\/Lolly/)) {
+  if (page.path.match(/^\/LollyCreate/)) {
     page.matchPath = "/LollyCreate/*";
     createPage(page);
   }

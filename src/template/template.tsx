@@ -14,8 +14,13 @@ const Template = ({
   },
 }) => {
   return (
-    <div>
-      <h1>helllo</h1>
+    <div className="template">
+      <div className="MainHead">
+        <h1 className="myh1">Virtual lolly</h1>
+        <p className="myp">
+          because we all know someone <br /> who deserves some sugar.
+        </p>
+      </div>
       <FinalPage
         Toname={Toname}
         message={message}

@@ -1,6 +1,3 @@
-const fs = require("fs");
-const { buildSchema, buildClientSchema } = require("graphql");
-
 module.exports = {
   plugins: [
     "gatsby-plugin-typescript",
@@ -8,9 +5,9 @@ module.exports = {
       resolve: "gatsby-source-graphql",
       options: {
         typeName: "allAuthors",
-        fieldName: "all_authors",
+        fieldName: "get_lollies",
         url: "http://localhost:8888/.netlify/functions/Addlolly",
-        batch: true,
+        refetchInterval: 60,
       },
     },
   ],

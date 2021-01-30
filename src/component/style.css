@@ -374,3 +374,7 @@
   color: white;
   border: none;
 }
+.template {
+  background-color: #221f2b;
+  background-size: contain;
+}

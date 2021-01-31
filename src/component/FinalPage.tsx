@@ -25,7 +25,7 @@ const FinalPage = ({
       <div className="datashow">
         <p id="mainPara">Your lolly is freezing. Share it with this link:</p>
 
-        <p id="linkPath">{`http://localhost:8888/LollyCreate/${lollyPath}`}</p>
+        <p id="linkPath">{`https://virtual-lolly-pop.netlify.app/LollyCreate/${lollyPath}`}</p>
         <span className="MainText">
           <h1>{Toname}</h1>
           <h1>{message}</h1>
